@@ -2,9 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>L'Oréal | Smart Routine & Product Advisor</title>
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <title>
+    L'Oréal | Smart Routine &amp; Product Advisor
+  </title>
 
   <!-- Google Font -->
   <link
@@ -12,7 +18,7 @@
     rel="stylesheet"
   />
 
-  <!-- Font Awesome Icons -->
+  <!-- Font Awesome -->
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -22,13 +28,16 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 
+
 <body>
 
   <div class="page-wrapper">
 
-    <!-- =========================
-         HEADER
-    ========================== -->
+
+    <!-- =================================
+         HEADER / BRANDING
+    ================================== -->
+
     <header class="site-header">
 
       <img
@@ -38,25 +47,33 @@
       />
 
       <h1 class="site-title">
-        Smart Routine & Product Advisor
+        Smart Routine &amp; Product Advisor
       </h1>
 
       <p class="site-subtitle">
-        Discover products and build a personalized beauty routine with AI.
+        Discover products and build a personalized
+        beauty routine with AI.
       </p>
 
     </header>
 
 
-    <!-- =========================
-         SEARCH AND FILTER
-    ========================== -->
+
+    <!-- =================================
+         SEARCH + CATEGORY FILTER
+    ================================== -->
+
     <section class="search-section">
 
-      <!-- Product Search - LevelUp -->
+
+      <!-- Product Search LevelUp -->
+
       <div class="product-search">
 
-        <label for="productSearch" class="visually-hidden">
+        <label
+          for="productSearch"
+          class="visually-hidden"
+        >
           Search Products
         </label>
 
@@ -72,11 +89,16 @@
       </div>
 
 
+
       <!-- Category Filter -->
+
       <div class="category-filter">
 
-        <label for="categoryFilter" class="visually-hidden">
-          Filter by Category
+        <label
+          for="categoryFilter"
+          class="visually-hidden"
+        >
+          Choose a Category
         </label>
 
         <select id="categoryFilter">
@@ -90,7 +112,11 @@
           </option>
 
           <option value="moisturizer">
-            Moisturizers & Treatments
+            Moisturizers &amp; Treatments
+          </option>
+
+          <option value="skincare">
+            Skincare &amp; Serums
           </option>
 
           <option value="haircare">
@@ -128,9 +154,11 @@
     </section>
 
 
-    <!-- =========================
+
+    <!-- =================================
          PRODUCTS
-    ========================== -->
+    ================================== -->
+
     <main>
 
       <section class="products-section">
@@ -142,7 +170,7 @@
           </h2>
 
           <p>
-            Browse L'Oréal products and select the ones you want
+            Select the L'Oréal products you would like
             to include in your personalized routine.
           </p>
 
@@ -150,9 +178,10 @@
 
 
         <!--
-          JavaScript will create the product cards
-          and place them inside this container.
+          script.js loads products.json
+          and places the product cards here.
         -->
+
         <div
           id="productsContainer"
           class="products-grid"
@@ -161,20 +190,27 @@
       </section>
 
 
-      <!-- =========================
+
+      <!-- =================================
            SELECTED PRODUCTS
-      ========================== -->
+      ================================== -->
+
       <section class="selected-products">
+
 
         <div class="selected-header">
 
           <h2>
+
             <i class="fa-solid fa-bag-shopping"></i>
+
             Selected Products
+
           </h2>
 
 
-          <!-- Clear all selections -->
+          <!-- Clear saved products -->
+
           <button
             type="button"
             id="clearSelections"
@@ -190,9 +226,12 @@
         </div>
 
 
+
         <!--
-          Selected products will be displayed here.
+          JavaScript displays the user's
+          selected products here.
         -->
+
         <div id="selectedProductsList">
 
           <p class="empty-selection">
@@ -202,7 +241,9 @@
         </div>
 
 
-        <!-- Generate Routine Button -->
+
+        <!-- Generate AI Routine -->
+
         <button
           type="button"
           id="generateRoutine"
@@ -215,15 +256,19 @@
 
         </button>
 
+
       </section>
 
     </main>
 
 
-    <!-- =========================
+
+    <!-- =================================
          AI CHAT AREA
-    ========================== -->
+    ================================== -->
+
     <section class="chatbox">
+
 
       <div class="chat-heading">
 
@@ -232,7 +277,7 @@
         <div>
 
           <h2>
-            AI Beauty Advisor
+            L'Oréal AI Beauty Advisor
           </h2>
 
           <p>
@@ -244,14 +289,18 @@
       </div>
 
 
-      <!-- Chat Messages -->
+
+      <!--
+        AI and user messages appear here.
+      -->
+
       <div
         id="chatWindow"
         class="chat-window"
         aria-live="polite"
       >
 
-        <!-- Starting AI Message -->
+
         <div class="message assistant-message">
 
           <strong>
@@ -265,14 +314,20 @@
 
         </div>
 
+
       </div>
 
 
-      <!-- Chat Form -->
+
+      <!-- =================================
+           CHAT INPUT
+      ================================== -->
+
       <form
         id="chatForm"
         class="chat-form"
       >
+
 
         <label
           for="userInput"
@@ -286,7 +341,7 @@
           id="userInput"
           name="userInput"
           type="text"
-          placeholder="Ask me about your routine..."
+          placeholder="Ask me about your routine or beauty products..."
           autocomplete="off"
           required
         />
@@ -306,15 +361,18 @@
 
         </button>
 
+
       </form>
+
 
     </section>
 
 
-    <!-- =========================
-         RTL LANGUAGE SUPPORT
-         LevelUp +5
-    ========================== -->
+
+    <!-- =================================
+         RTL LANGUAGE SUPPORT LEVELUP
+    ================================== -->
+
     <section class="accessibility-options">
 
       <button
@@ -332,9 +390,11 @@
     </section>
 
 
-    <!-- =========================
+
+    <!-- =================================
          FOOTER
-    ========================== -->
+    ================================== -->
+
     <footer class="site-footer">
 
       <p>
@@ -358,15 +418,25 @@
 
       </nav>
 
+
     </footer>
+
 
   </div>
 
 
-  <!-- =========================
+
+  <!-- =================================
        JAVASCRIPT
-  ========================== -->
+  ================================== -->
+
+  <!--
+    script.js communicates with your
+    Cloudflare Worker.
+  -->
+
   <script src="script.js"></script>
+
 
 </body>
 </html>
